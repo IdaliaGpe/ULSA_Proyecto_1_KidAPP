@@ -16,12 +16,17 @@ class ViewController: UIViewController {
     var urlClover: URL?
     var urlSpades: URL?
     var urlDiamond: URL?
+    var urlMusica: URL?
     
     //VariablesSecuencia
     var secuenciaSpades1 : [UIImage] = []
     var secuenciaSpades2 : [UIImage] = []
     
     var secuenciaClover1 : [UIImage] = []
+    var secuenciaClover2 : [UIImage] = []
+    
+    var secuenciaDiamond1 : [UIImage] = []
+    var secuenciaDiamond2 : [UIImage] = []
     
     //Variables Texto e Imagenes
     @IBOutlet weak var lblTextoChange: UILabel!
@@ -45,12 +50,23 @@ class ViewController: UIViewController {
             print(error.localizedDescription)
         }
         
+        //Musica
+        do{
+            reproductorAudios = try AVAudioPlayer(contentsOf: urlMusica!, fileTypeHint: AVFileType.mp3.rawValue)
+            reproductorAudios?.volume = 0.2
+            reproductorAudios?.play()
+        }catch let error {
+            print(error.localizedDescription)
+        }
+        
         //URL Audio
-        urlClover = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
+        urlClover = Bundle.main.url(forResource: "Clover", withExtension: "mp3")
         
-        urlSpades = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
+        urlSpades = Bundle.main.url(forResource: "Spades", withExtension: "mp3")
         
-        urlDiamond = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
+        urlDiamond = Bundle.main.url(forResource: "Diamond", withExtension: "mp3")
+        
+        urlMusica = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
         
         //Secuencias
         for i in 1...24{
@@ -58,11 +74,29 @@ class ViewController: UIViewController {
             secuenciaSpades1.append(imagen!)
         }
         
+        for i in 1...24{
+            let imagen = UIImage(named: "Diamante\(i)")
+            secuenciaDiamond1.append(imagen!)
+        }
+        
+        for i in 1...24{
+            let imagen = UIImage(named: "Trebol\(i)")
+            secuenciaClover1.append(imagen!)
+        }
+        
         //Secuencia Imagen
         imgSpades.animationImages = secuenciaSpades1
         imgSpades.animationDuration = 1.0
         imgSpades.startAnimating()
         
+        imgClover.animationImages = secuenciaClover1
+        imgClover.animationDuration = 1.0
+        imgClover.startAnimating()
+        
+        imgDiamond.animationImages = secuenciaDiamond1
+        imgDiamond.animationDuration = 1.0
+        imgDiamond.startAnimating()
+
     }
     
     @IBAction func doClover(_ sender: Any) {
@@ -72,9 +106,21 @@ class ViewController: UIViewController {
         do{
             reproductorAudios = try AVAudioPlayer(contentsOf: urlClover!, fileTypeHint: AVFileType.mp3.rawValue)
             reproductorAudios?.volume = 1
+            reproductorAudios?.play()
         }catch let error {
             print(error.localizedDescription)
         }
+        
+        for i in 1...24{
+            let imagen = UIImage(named: "xTrebol\(i)")
+            secuenciaClover2.append(imagen!)
+        }
+        
+        //Imagenes
+        imgPrincipal.stopAnimating()
+        imgPrincipal.animationImages = secuenciaClover2
+        imgPrincipal.animationDuration = 1.0
+        imgPrincipal.startAnimating()
     }
     
     @IBAction func doPica(_ sender: Any) {
@@ -82,15 +128,20 @@ class ViewController: UIViewController {
         
         //Sonido
         do{
-            reproductorAudios = try AVAudioPlayer(contentsOf: urlClover!, fileTypeHint: AVFileType.mp3.rawValue)
-            reproductorAudios?.volume = 1
+            reproductorAudios = try AVAudioPlayer(contentsOf: urlSpades!, fileTypeHint: AVFileType.mp3.rawValue)
+            reproductorAudios?.play()
         }catch let error {
             print(error.localizedDescription)
         }
         
+        for i in 1...24{
+            let imagen = UIImage(named: "xPica\(i)")
+            secuenciaSpades2.append(imagen!)
+        }
+        
         //Imagenes
         imgPrincipal.stopAnimating()
-        imgPrincipal.animationImages = secuenciaSpades1
+        imgPrincipal.animationImages = secuenciaSpades2
         imgPrincipal.animationDuration = 1.0
         imgPrincipal.startAnimating()
     }
@@ -100,9 +151,21 @@ class ViewController: UIViewController {
         
         do{
             reproductorAudios = try AVAudioPlayer(contentsOf: urlDiamond!, fileTypeHint: AVFileType.mp3.rawValue)
+            reproductorAudios?.play()
         }catch let error {
             print(error.localizedDescription)
         }
+        
+        for i in 1...24{
+            let imagen = UIImage(named: "xDiamante\(i)")
+            secuenciaDiamond2.append(imagen!)
+        }
+        
+        //Imagenes
+        imgPrincipal.stopAnimating()
+        imgPrincipal.animationImages = secuenciaDiamond2
+        imgPrincipal.animationDuration = 1.0
+        imgPrincipal.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {

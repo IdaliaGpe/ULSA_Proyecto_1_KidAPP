@@ -16,6 +16,9 @@
 		3DDA792F28C63F0E00288708 /* Proyecto_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA792E28C63F0E00288708 /* Proyecto_1Tests.swift */; };
 		3DDA793A28C63F0E00288708 /* Proyecto_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA793928C63F0E00288708 /* Proyecto_1UITests.swift */; };
 		3DDA794A28C64D2700288708 /* One Crayon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3DDA794928C64D2600288708 /* One Crayon.ttf */; };
+		3DDDD5DD28CF82C20066923E /* Spades.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDD5DA28CF82C20066923E /* Spades.mp3 */; };
+		3DDDD5DE28CF82C20066923E /* Clover.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDD5DB28CF82C20066923E /* Clover.mp3 */; };
+		3DDDD5DF28CF82C20066923E /* Diamond.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3DDDD5DC28CF82C20066923E /* Diamond.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		3D61E11128CB93DA0017F22D /* Fondomusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fondomusic.mp3; sourceTree = "<group>"; };
-		3DDA791628C63EFD00288708 /* Proyecto_1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Proyecto_1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDA791628C63EFD00288708 /* CAЯDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CAЯDS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DDA791928C63EFD00288708 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DDA791B28C63EFD00288708 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DDA791E28C63EFD00288708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,9 @@
 		3DDA793928C63F0E00288708 /* Proyecto_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proyecto_1UITests.swift; sourceTree = "<group>"; };
 		3DDA793B28C63F0E00288708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DDA794928C64D2600288708 /* One Crayon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "One Crayon.ttf"; sourceTree = "<group>"; };
+		3DDDD5DA28CF82C20066923E /* Spades.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spades.mp3; sourceTree = "<group>"; };
+		3DDDD5DB28CF82C20066923E /* Clover.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Clover.mp3; sourceTree = "<group>"; };
+		3DDDD5DC28CF82C20066923E /* Diamond.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Diamond.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +97,7 @@
 		3DDA791728C63EFD00288708 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3DDA791628C63EFD00288708 /* Proyecto_1.app */,
+				3DDA791628C63EFD00288708 /* CAЯDS.app */,
 				3DDA792A28C63F0E00288708 /* Proyecto_1Tests.xctest */,
 				3DDA793528C63F0E00288708 /* Proyecto_1UITests.xctest */,
 			);
@@ -102,6 +108,9 @@
 			isa = PBXGroup;
 			children = (
 				3DDA794928C64D2600288708 /* One Crayon.ttf */,
+				3DDDD5DB28CF82C20066923E /* Clover.mp3 */,
+				3DDDD5DC28CF82C20066923E /* Diamond.mp3 */,
+				3DDDD5DA28CF82C20066923E /* Spades.mp3 */,
 				3D61E11128CB93DA0017F22D /* Fondomusic.mp3 */,
 				3DDA791928C63EFD00288708 /* AppDelegate.swift */,
 				3DDA791B28C63EFD00288708 /* ViewController.swift */,
@@ -148,7 +157,7 @@
 			);
 			name = Proyecto_1;
 			productName = Proyecto_1;
-			productReference = 3DDA791628C63EFD00288708 /* Proyecto_1.app */;
+			productReference = 3DDA791628C63EFD00288708 /* CAЯDS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3DDA792928C63F0E00288708 /* Proyecto_1Tests */ = {
@@ -237,8 +246,11 @@
 			files = (
 				3DDA794A28C64D2700288708 /* One Crayon.ttf in Resources */,
 				3D61E11228CB93DA0017F22D /* Fondomusic.mp3 in Resources */,
+				3DDDD5DE28CF82C20066923E /* Clover.mp3 in Resources */,
 				3DDA792428C63F0E00288708 /* LaunchScreen.storyboard in Resources */,
 				3DDA792128C63F0D00288708 /* Assets.xcassets in Resources */,
+				3DDDD5DF28CF82C20066923E /* Diamond.mp3 in Resources */,
+				3DDDD5DD28CF82C20066923E /* Spades.mp3 in Resources */,
 				3DDA791F28C63EFD00288708 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -445,7 +457,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.ulsa.Proyecto-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CAЯDS";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +474,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "edu.ulsa.Proyecto-1";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "CAЯDS";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
