@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     //Varbles Audio
     var reproductorAudios : AVAudioPlayer?
+    var reproductorMusica : AVAudioPlayer?
     var urlClover: URL?
     var urlSpades: URL?
     var urlDiamond: URL?
@@ -52,9 +53,10 @@ class ViewController: UIViewController {
         
         //Musica
         do{
-            reproductorAudios = try AVAudioPlayer(contentsOf: urlMusica!, fileTypeHint: AVFileType.mp3.rawValue)
-            reproductorAudios?.volume = 0.2
-            reproductorAudios?.play()
+            let urlMusica = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
+            reproductorMusica = try AVAudioPlayer(contentsOf: urlMusica!, fileTypeHint: AVFileType.mp3.rawValue)
+            reproductorMusica?.volume = 0.2
+            reproductorMusica?.play()
         }catch let error {
             print(error.localizedDescription)
         }
@@ -65,8 +67,6 @@ class ViewController: UIViewController {
         urlSpades = Bundle.main.url(forResource: "Spades", withExtension: "mp3")
         
         urlDiamond = Bundle.main.url(forResource: "Diamond", withExtension: "mp3")
-        
-        urlMusica = Bundle.main.url(forResource: "Fondomusic", withExtension: "mp3")
         
         //Secuencias
         for i in 1...24{
